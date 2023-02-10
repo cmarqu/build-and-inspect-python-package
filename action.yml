@@ -29,7 +29,7 @@ runs:
       run: ${{ steps.python-baipp.outputs.python-path }} -Im venv /tmp/baipp
       shell: bash
 
-    - run: /tmp/baipp/bin/python -Im pip install -r ${{ github.action_path }}/requirements/tools.txt
+    - run: /tmp/baipp/bin/python -Im pip install -r ${GITHUB_ACTION_PATH}/requirements/tools.txt
       shell: bash
 
     # Build SDist, then build wheel out of it.
